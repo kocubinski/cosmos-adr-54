@@ -1,4 +1,4 @@
-# proto dependencies sourced rougly from
+# proto dependencies sourced roughly from
 # https://github.com/cosmos/cosmos-sdk/blob/76be73022ac811b97ad4e3f8cf14a41563e795df/contrib/devtools/Dockerfile
 
 GOLANG_PROTOBUF_VERSION = 1.28.1

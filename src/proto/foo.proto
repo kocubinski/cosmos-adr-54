@@ -12,5 +12,5 @@ message MsgDoSomethingResponse {
 }
 
 service Msg {
-    rpc DoSomething(MsgDoSomething) returns (MsgDoSomethingResponse);
+  rpc DoSomething(MsgDoSomething) returns (MsgDoSomethingResponse);
 }
