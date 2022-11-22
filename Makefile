@@ -1,3 +1,6 @@
+# proto dependencies sourced rougly from
+# https://github.com/cosmos/cosmos-sdk/blob/76be73022ac811b97ad4e3f8cf14a41563e795df/contrib/devtools/Dockerfile
+
 GOLANG_PROTOBUF_VERSION = 1.28.1
 GRPC_GATEWAY_VERSION = 1.16.0
 BIN = $(CURDIR)/bin
@@ -8,8 +11,8 @@ BUF = $(BIN)/buf
 $(BIN)/protoc-gen-go:
 	GOBIN=$(BIN) go install google.golang.org/protobuf/cmd/protoc-gen-go@v$(GOLANG_PROTOBUF_VERSION)
 
-$(BIN)/protoc-gocosmos:
-	GOBIN=$(BIN) go install github.com/cosmos/cosmos-proto/cmd/protoc-gen-go-pulsar@latest
+$(BIN)/protoc-gen-gocosmos:
+	GOBIN=$(BIN) go install github.com/cosmos/gogoproto/protoc-gen-gocosmos@latest
 
 $(BIN)/protoc-gen-grpc-gateway:
 	GOBIN=$(BIN) go install github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway@v$(GRPC_GATEWAY_VERSION)
@@ -17,9 +20,9 @@ $(BIN)/protoc-gen-grpc-gateway:
 $(BUF):
 	./install-buf.sh
 
-proto-gen: $(BUF) $(BIN)/protoc-gen-go $(BIN)/protoc-gocosmos $(BIN)/protoc-gen-grpc-gateway
+proto-gen: $(BUF) $(BIN)/protoc-gen-go $(BIN)/protoc-gen-gocosmos $(BIN)/protoc-gen-grpc-gateway
 	@echo "Generating proto files"
-	@buf generate
+	PATH=$(BIN) buf generate src/proto
 
 clean:
 	rm -rf $(BIN)
