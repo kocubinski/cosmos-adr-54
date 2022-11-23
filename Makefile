@@ -23,6 +23,7 @@ $(BUF):
 proto-gen: $(BUF) $(BIN)/protoc-gen-go $(BIN)/protoc-gen-gocosmos $(BIN)/protoc-gen-grpc-gateway
 	@echo "Generating proto files"
 	PATH=$(BIN) buf generate --output src/naive/foo/v1/api src/naive/foo/v1/proto
+	PATH=$(BIN) buf generate --output src/naive/foo/v2/api src/naive/foo/v2/proto
 
 clean:
 	rm -rf $(BIN)
