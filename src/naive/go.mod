@@ -1,4 +1,4 @@
-module github.com/kocubinski/cosmos-forward-backward
+module github.com/kocubinski/cosmos-forward-backward/naive
 
 go 1.19
 
