@@ -14,10 +14,7 @@ func main() {
 		panic(err)
 	}
 
-	var opts []grpc.ServerOption
-	grpcServer := grpc.NewServer(opts...)
-	//RegisterRoute
-	//pb.RegisterRouteGuideServer(grpcServer, newServer())
+	grpcServer := grpc.NewServer()
 	foo_v1.RegisterMsgServer(grpcServer, foo.NewMsgServer())
 	err = grpcServer.Serve(lis)
 	if err != nil {
