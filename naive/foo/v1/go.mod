@@ -1,4 +1,4 @@
-module github.com/kocubinski/cosmos-adr-54/naive/foo/v1
+module github.com/kocubinski/cosmos-adr-54/naive/foo
 
 go 1.19
 
