@@ -3,7 +3,8 @@ package foo
 import (
 	"context"
 	"fmt"
-	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/foo/v1/api"
+
+	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/foo/api"
 )
 
 type Keeper interface {

@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/kocubinski/cosmos-adr-54/naive/foo/v1"
-	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/foo/v1/api"
-	"google.golang.org/grpc"
 	"net"
+
+	"github.com/kocubinski/cosmos-adr-54/naive/foo"
+	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/foo/api"
+	"google.golang.org/grpc"
 )
 
 func main() {
