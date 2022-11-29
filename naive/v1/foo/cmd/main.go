@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/kocubinski/cosmos-adr-54/naive/foo"
-	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/foo/api"
+	"github.com/kocubinski/cosmos-adr-54/naive/v1/foo"
+	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/v1/foo/api"
 	"google.golang.org/grpc"
 )
 

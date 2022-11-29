@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/foo/api"
+	foo_v1 "github.com/kocubinski/cosmos-adr-54/naive/v1/foo/api"
 )
 
 type Keeper interface {
