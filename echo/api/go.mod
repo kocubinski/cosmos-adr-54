@@ -4,8 +4,8 @@ go 1.19
 
 require (
 	github.com/cosmos/gogoproto v1.4.3
+	github.com/kocubinski/cosmos-adr-54/echo/v1/foo v0.0.0-20221130202135-35087d542932
 	google.golang.org/grpc v1.51.0
-	github.com/kocubinski/cosmos-adr-54/echo/foo latest
 )
 
 require (
@@ -17,6 +17,4 @@ require (
 	google.golang.org/protobuf v1.28.1 // indirect
 )
 
-replace (
-	github.com/kocubinski/cosmos-adr-54/echo/foo latest => ../../foo
-)
+replace github.com/kocubinski/cosmos-adr-54/echo/v1/foo v0.0.0-20221130202135-35087d542932 => ./../v1/foo
