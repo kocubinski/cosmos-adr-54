@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-func main() {
+func StartGRPCServer() {
 	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", 8080))
 	if err != nil {
 		panic(err)
@@ -21,4 +21,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func main() {
+	StartGRPCServer()
 }
