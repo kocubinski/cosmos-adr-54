@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 // Revision 1
-package foo.v1;
+package foo.v2;
 
 message MsgDoSomething {
   string sender = 1;
