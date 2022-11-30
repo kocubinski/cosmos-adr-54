@@ -8,17 +8,17 @@ import (
 )
 
 var (
-	_ fooapi.MsgServer = msgServer{}
+	_ fooapi.MsgServer = fooMsgServer{}
 )
 
-type msgServer struct {
+type fooMsgServer struct {
 	foo.Keeper
 }
 
-func (m msgServer) DoSomething(_ context.Context, something *fooapi.MsgDoSomething) (*fooapi.MsgDoSomethingResponse, error) {
+func (m fooMsgServer) DoSomething(_ context.Context, something *fooapi.MsgDoSomething) (*fooapi.MsgDoSomethingResponse, error) {
 	return &fooapi.MsgDoSomethingResponse{Success: true}, m.Keeper.DoSomething(something.Sender, something.Amount)
 }
 
-func NewMsgServer() fooapi.MsgServer {
-	return msgServer{Keeper: foo.NewKeeper()}
+func NewFooMsgServer() fooapi.MsgServer {
+	return fooMsgServer{Keeper: foo.NewKeeper()}
 }
