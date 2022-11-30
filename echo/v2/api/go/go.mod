@@ -4,6 +4,8 @@ go 1.19
 
 require (
 	github.com/cosmos/gogoproto v1.4.3
+	github.com/kocubinski/cosmos-adr-54/echo/v1/foo v0.0.0-00010101000000-000000000000
+	github.com/kocubinski/cosmos-adr-54/echo/v2/foo v0.0.0-00010101000000-000000000000
 	google.golang.org/grpc v1.51.0
 )
 
@@ -16,4 +18,7 @@ require (
 	google.golang.org/protobuf v1.28.1 // indirect
 )
 
-replace github.com/kocubinski/cosmos-adr-54/echo/v1/foo v0.0.0-20221130204452-6ff2f16fc6b3 => ./../../foo
+replace (
+	github.com/kocubinski/cosmos-adr-54/echo/v1/foo => ./../../../v1/foo
+	github.com/kocubinski/cosmos-adr-54/echo/v2/foo => ./../../../v2/foo
+)

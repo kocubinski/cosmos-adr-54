@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/cosmos/gogoproto v1.4.3
-	github.com/kocubinski/cosmos-adr-54/echo/v1/foo latest
+	github.com/kocubinski/cosmos-adr-54/echo/v1/foo v0.0.0-20221130204452-6ff2f16fc6b3
 	google.golang.org/grpc v1.51.0
 )
 
