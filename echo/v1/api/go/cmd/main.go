@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"net"
 
-	api "github.com/kocubinski/cosmos-adr-54/echo/api/go"
-	fooapi "github.com/kocubinski/cosmos-adr-54/echo/api/go/gen"
+	"github.com/kocubinski/cosmos-adr-54/echo/v1/api"
+	fooapi "github.com/kocubinski/cosmos-adr-54/echo/v1/api/gen"
 	"google.golang.org/grpc"
 )
 
-func StartGRPCServer() {
+func main() {
 	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", 8080))
 	if err != nil {
 		panic(err)
@@ -21,8 +21,4 @@ func StartGRPCServer() {
 	if err != nil {
 		panic(err)
 	}
-}
-
-func main() {
-	StartGRPCServer()
 }

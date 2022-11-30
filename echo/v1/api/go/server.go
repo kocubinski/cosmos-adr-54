@@ -3,7 +3,7 @@ package api
 import (
 	"context"
 
-	fooapi "github.com/kocubinski/cosmos-adr-54/echo/api/go/gen"
+	fooapi "github.com/kocubinski/cosmos-adr-54/echo/v1/api/gen"
 	"github.com/kocubinski/cosmos-adr-54/echo/v1/foo"
 )
 
