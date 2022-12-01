@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package foo;
+package foo.v1;
 
 message MsgDoSomething {
   string sender = 1;
